@@ -12,7 +12,6 @@ public class CannonBallTTL : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //Debug.Log("CannonBallTTL: " + (Time.time - startTime));
         if (Time.time - startTime > timeToLive)
             Destroy(this.gameObject);
 	}

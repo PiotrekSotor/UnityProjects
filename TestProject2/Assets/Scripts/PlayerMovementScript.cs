@@ -15,10 +15,11 @@ public class PlayerMovementScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        Vector3 movementVector = new  Vector3(1f,0f,0f);// = tr.right;
-        Debug.Log("movementVector: " + movementVector);
-        float h = Input.GetAxis("Horizontal");
-        tr.Rotate(new Vector3(0, h * agility*Time.deltaTime, 0), Space.World);
+        Vector3 movementVector = new  Vector3(1f,0f,0f);        
         tr.Translate(movementVector*speed*Time.deltaTime);
 	}
+    public void PlayerStearing(float h)
+    {
+        tr.Rotate(new Vector3(0, h * agility * Time.deltaTime, 0), Space.World);
+    }
 }
