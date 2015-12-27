@@ -16,7 +16,6 @@ public class PlayerController : MonoBehaviour {
         playerMovementScript = this.gameObject.GetComponent<PlayerMovementScript>();
         cannonRotateScript = this.gameObject.GetComponentInChildren<ConnonRotateScript>();
         fireScripts = this.gameObject.GetComponentsInChildren<FireScript>();
-        
 	}
 	
 	// Update is called once per frame
