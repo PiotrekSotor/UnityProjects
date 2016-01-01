@@ -8,7 +8,7 @@ public class SplineController : MonoBehaviour
 {
     public Vector3[] Positions;
     public Transform[] Transforms;
-    public Transform[] mTransforms;
+    private Transform[] mTransforms;
     public GameObject SplineRoot;
     private SplineInterpolator splineInterpolator;
     private float Duration = 10;
@@ -17,7 +17,6 @@ public class SplineController : MonoBehaviour
     private bool AutoStart = true;
     private bool AutoClose = true;
 	private bool HideOnExecute = true;
-    public Transform EmptyGameObject;
     private SplineInterpolator mSplineInterp;
 
    public Vector3[] GetPoints(float numOfVertices)
@@ -114,12 +113,7 @@ public class SplineController : MonoBehaviour
 
         else if (Positions != null)
         {
-            //GameObject obj = Instantiate()
             Transform[] transforms = new Transform[Positions.Length];
-            //for (int i=0;i<transforms.Length;++i)
-            //    transforms[i] = Instantiate(EmptyGameObject, Positions[i], new Quaternion()) as Transform;
-            //for (int i=0;i<Positions.Length;++i)
-            //    transforms[i].position = ;
             return transforms;
 
         }
